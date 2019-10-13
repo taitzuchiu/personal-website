@@ -1,3 +1,10 @@
+$primary-color: #F199B6;
+$intro-color: #663E50  ;
+
+$dark-color:  #4D4145;
+$light-color: #fcaccb;
+
+// #eeaeca
 .header {
   top: 0;
   width: 100%;
@@ -20,13 +27,13 @@
   
     text-align: center;
   
-    color: white;
+    color: $primary-color;
     font-weight:600;
     text-decoration: none;
   
     &.selected {
-      color: rgb(204, 124, 168);
-      background: white;
+      color: white;
+      background: $primary-color;
       border-radius: 15px;
       transition: background-color .4s ease;
     }
@@ -86,8 +93,8 @@
       position: relative;
       border-radius: 50%;
 
-      background-color: rgb(204, 124, 168);
-      border: white solid 2px;
+      background-color: white;
+      border: $primary-color solid 2px;
   
       height: 10px;
       width: 10px;
@@ -95,15 +102,15 @@
       margin-top: 20px;
 
       &:hover {
-        background-color: rgb(219, 179, 201);
+        background-color: $light-color;
         transition: all .3s ease;
         // border: white dashed 2px;
       }
   
       &.selected {
-        background-color: white;
+        background-color: $primary-color;
         border: white solid 2px;
-        transition: all .3s ease;
+        transition: all .1s ease-in-out;
       }
   
       a {
@@ -123,7 +130,7 @@
 
 .intro {
   text-align: left;
-  color: white;
+  color: $intro-color;
   padding: 12% 12% 12% 20%;
   
   h1 {
@@ -134,16 +141,16 @@
   h2 {
     font-size: 50px;
     font-weight: 300;
-    color: #ffdee2;
+    color: $light-color;
   }
 }
 
 .mySection{
   .box {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
-    color: rgb(75, 48, 71);
+    // background: white;
+    // border-radius: 15px;
+    // box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    color: $dark-color;
 
     // width: 65%;
     // max-width: 1000px;
@@ -171,13 +178,12 @@
 
     .text {
       line-height: 1.75;
-      font-size: 1.75vh;
+      font-size: 18px;
     }
   }
 }
 
-// MOBILE FRIENDLY STYLING
-// hamburger menu adapted from Erik Terwan, MIT License (https://codepen.io/erikterwan/pen/EVzeRP)
+// mobile-friendly styling
 
 .hamburger {
   display: block;
@@ -207,7 +213,7 @@
     margin-bottom: 5px;
     position: relative;
     
-    background: white;
+    background: $primary-color;
     border-radius: 3px;
     
     z-index: 1;
@@ -231,7 +237,7 @@
     ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: rgb(75, 48, 71);
+    background: $dark-color;
     }
 
     ~ span:nth-last-child(3) {
@@ -253,7 +259,7 @@
     padding-top: 150px;
     padding-bottom: 100vh;
     
-    background: #ffffff;
+    background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -275,12 +281,12 @@
   
       padding: 8px 12px 8px 15px;
     
-      color: rgb(204, 124, 168);
+      color: $primary-color;
       font-weight:600;
       text-decoration: none;
 
       &:hover {
-        color: rgb(75, 48, 71);
+        color: $dark-color;
       }
 
     }
@@ -311,30 +317,22 @@
   }
 }
 
-@media(max-height:880px), (max-width:700px) {
+@media(max-height:880px), (max-width:600px) {
   .intro {
     h1 {
-      @media (orientation: landscape) {
-        font-size: 5vh !important;
-      }
-
-      @media (orientation: portrait) {
-        font-size: 4vh !important;
-      }
+      font-size: 30px;
     }
   
     h2 {
-      @media (orientation: landscape) {
-        font-size: 4.5vh !important;
-      }
-
-      @media (orientation: portrait) {
-        font-size: 3vh !important;
-      }
+      font-size: 20px;
     }
   }
 
   .header {
+    display: none;
+  }
+
+  .side {
     display: none;
   }
 
@@ -344,40 +342,21 @@
 
   .mySection{
     .box {
-      //margin-top: 75px;
-      //margin-bottom:1vh;
-      // display: block;
-      // margin: 0 auto;
+      margin-top: 5vh;
+      margin-bottom:1vh;
       height: fit-content;
-      width: 75%;
-
-      margin: auto;
-
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    
-      padding: 4%;
   
       .title {
+        font-size: 3.5vw;
         font-weight: 600;
         line-height: 2;
-
-        @media (orientation: landscape) {
-          font-size: 3.5vh;
-        }
-
-        @media (orientation: portrait) {
-          font-size: 2vh;
-        }
       }
   
       .text {
         line-height: 1.5;
 
         @media (orientation: landscape) {
-          font-size: 2.3vh;
+          font-size: 2vh;
         }
 
         @media (orientation: portrait) {
@@ -415,7 +394,7 @@
       margin-bottom: 3px;
       position: relative;
       
-      background: white;
+      background: $primary-color;
       border-radius: 3px;
       
       z-index: 1;
@@ -439,7 +418,7 @@
       ~ span {
       opacity: 1;
       transform: rotate(45deg) translate(-1px, 1px);
-      background: rgb(75, 48, 71);
+      background: $dark-color;
       }
   
       ~ span:nth-last-child(3) {
@@ -482,13 +461,13 @@
     
         padding: 8px 12px 8px 15px;
       
-        color: rgb(204, 124, 168);
+        color: $primary-color;
         font-size: 15px;
         font-weight:600;
         text-decoration: none;
   
         &:hover {
-          color: rgb(75, 48, 71);
+          color:$dark-color;
         }
   
       }

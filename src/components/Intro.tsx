@@ -11,7 +11,7 @@ class Intro extends React.Component {
           <h1 style={{ fontWeight: 300, fontSize: 60 }}>
             hello! i’m <span style={{ fontWeight: 700 }}>Sam</span>. &nbsp;
           </h1>
-          <h2 style={{ fontWeight: 300, fontSize: 50, color: "#ffdee2" }}>
+          <h2 style={{ fontWeight: 300, fontSize: 50 }}>
             i code sometimes.
           </h2>
         </div>

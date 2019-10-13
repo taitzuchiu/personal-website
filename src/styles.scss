@@ -2,8 +2,10 @@ html {
   font-family: 'Quicksand', sans-serif !important;
   letter-spacing: 2px;
 
-  background: rgb(255, 185, 216);
-  background-image: radial-gradient( circle farthest-corner at -1.7% -2.7%,  rgb(255, 146, 161) 0%, rgb(204, 124, 168) 90% );
+  background-image: url("./images/background.png");
+  background-repeat: repeat;
+
+  // background-image: radial-gradient( circle farthest-corner at -1.7% -2.7%,  rgb(255, 146, 161) 0%, rgb(204, 124, 168) 90% );
 
   scroll-behavior: smooth;
 }
