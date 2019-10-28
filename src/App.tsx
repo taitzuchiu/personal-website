@@ -41,6 +41,8 @@ class App extends React.Component<Props> {
           anchors={["hello", "about", "experience", "projects"]}
           onLeave={this.onLeave.bind(this)}
           recordHistory={false}
+          responsiveWidth={1000}
+          responsiveHeight={700}
           render={() => {
             return (
               <div>

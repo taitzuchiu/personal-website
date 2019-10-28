@@ -4,13 +4,18 @@ $intro-color: #663E50  ;
 $dark-color:  #4D4145;
 $light-color: #fcaccb;
 
-// #eeaeca
+
 .header {
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 70px;
   position: fixed;
   z-index: 99;
+
+  // background-image: url("../images/background.png");
+  background-repeat: repeat;
+  background-image: url("../images/background.png");
+
 
   .nav {
     top: 3%;
@@ -104,7 +109,6 @@ $light-color: #fcaccb;
       &:hover {
         background-color: $light-color;
         transition: all .3s ease;
-        // border: white dashed 2px;
       }
   
       &.selected {
@@ -147,18 +151,9 @@ $light-color: #fcaccb;
 
 .mySection{
   .box {
-    // background: white;
-    // border-radius: 15px;
-    // box-shadow: 0 0 11px rgba(33,33,33,.2); 
     color: $dark-color;
-
-    // width: 65%;
-    // max-width: 1000px;
-    // height: 60vh;
-    // min-height: 500px;
+    padding-top: 50px;
     height: fit-content;
-
-    // height: 60vh;
     width: 60vw;
 
     margin: auto;
@@ -307,7 +302,7 @@ $light-color: #fcaccb;
   }
 }
 
-@media(min-width:601px) {
+@media(min-width:801px) {
   .header {
     display: visible;
   }
@@ -317,53 +312,17 @@ $light-color: #fcaccb;
   }
 }
 
-@media(max-height:880px), (max-width:600px) {
-  .intro {
-    h1 {
-      font-size: 30px;
-    }
-  
-    h2 {
-      font-size: 20px;
-    }
-  }
-
+@media(max-width:800px) {
   .header {
     display: none;
   }
-
+  
   .side {
     display: none;
   }
-
+  
   .hamburger {
     display: visible;
-  }
-
-  .mySection{
-    .box {
-      margin-top: 5vh;
-      margin-bottom:1vh;
-      height: fit-content;
-  
-      .title {
-        font-size: 3.5vw;
-        font-weight: 600;
-        line-height: 2;
-      }
-  
-      .text {
-        line-height: 1.5;
-
-        @media (orientation: landscape) {
-          font-size: 2vh;
-        }
-
-        @media (orientation: portrait) {
-          font-size: 1.6vh;
-        }
-      }
-    }
   }
 
   .hamburger {
@@ -433,7 +392,6 @@ $light-color: #fcaccb;
   
     .buttons {
       position: absolute;
-      // width: 100px;
       margin: -80px 0 0 -70px;
       padding-left: 1px;
       padding-right: 50px;
@@ -475,6 +433,36 @@ $light-color: #fcaccb;
   
     input:checked ~ .buttons {
       transform: none;
+    }
+  }
+}
+
+@media(max-height:1000px), (max-width:600px) {
+  .intro {
+    h1 {
+      font-size: 30px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .mySection{
+    .box {
+      height: fit-content;
+      width: 67vw;
+  
+      .title {
+        font-size: calc(16px + .5vw);
+        font-weight: 600;
+        line-height: 2;
+      }
+  
+      .text {
+        line-height: 1.5;
+        font-size: 11.5pt;
+      }
     }
   }
 }
