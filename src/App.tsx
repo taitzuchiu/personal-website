@@ -48,7 +48,7 @@ class App extends React.Component<Props> {
               <div>
                 <div id="fullpage-wrapper">
                   <div className="section" data-anchor="hello">
-                    <Section id={1} title="intro" text={text.intro}/>
+                    <Section id={1} title="intro" text={<div/>}/>
                   </div>
                   <div className="section" data-anchor="about">
                     <Section id={2} title="about me" text={text.aboutMe} />
