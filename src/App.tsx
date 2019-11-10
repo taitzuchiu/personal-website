@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Hamburger from "./components/HamburgerNav";
 import MiniNav from "./components/MiniNav";
 import WebLinks from "./components/WebLinks";
+import Footer from "./components/Footer";
 
 import { connect } from "react-redux";
 import { changeSection } from "./redux/actions";
@@ -58,6 +59,7 @@ class App extends React.Component<Props> {
                   </div>
                   <div className="section" data-anchor="projects">
                     <Section id={4} title="projects" text={text.projects}/>
+                    <Footer/>
                   </div>
                 </div>
               </div>
