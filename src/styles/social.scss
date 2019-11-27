@@ -1,0 +1,31 @@
+.social {
+    // Position
+    position: fixed;
+    z-index: 100;
+    left: 0;
+  
+    .nav {
+        // Position
+        position: fixed;
+        top: 40%;
+    }
+  
+    li {
+        // Display
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style: none;
+  
+        :hover {
+            cursor: pointer;
+        }
+    }
+  
+    svg {
+        border-radius: 10px;
+  
+        &:hover {
+            box-shadow: 0 0 11px rgba(33,33,33,.2);
+        }
+    }
+  }

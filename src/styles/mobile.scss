@@ -1,0 +1,102 @@
+@media(max-width:1000px) {
+    .side {
+        display: none;
+    }
+  
+    .social {
+        display: none;
+    }
+}
+  
+@media(min-width:801px) {
+    .header {
+        display: visible;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+  
+@media(max-width:800px) {
+    .header {
+      display: none;
+    }
+    
+    .side {
+      display: none;
+    }
+    
+    .hamburger {
+      display: visible;
+    }
+  
+    .hamburger {
+      top: 25px;
+      right: 65px;
+    
+      input {
+        width: 18px;
+        height: 10px;
+      }
+    
+      // makes the hamburger
+      span {
+        width: 18px;
+        height: 2px;
+        margin-bottom: 3px;
+      }
+    
+      input:checked {
+        ~ span {
+            transform: rotate(45deg) translate(-1px, 1px);
+        }
+    
+        ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(-2, -0px);
+        } 
+      }
+    
+      .buttons {
+            margin: -80px 0 0 -70px;
+            padding-left: 1px;
+            
+            transform: translate(100%, 0);
+        
+            .button {
+                font-size: 15px;
+            }
+        }
+    }
+}
+  
+@media(max-height:1000px), (max-width:600px) {
+
+    .intro {
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .mySection{
+        .box {
+            height: fit-content;
+            width: 67vw;
+
+            .title {
+                font-size: calc(16px + .5vw);
+                font-weight: 600;
+                line-height: 2;
+            }
+
+            .text {
+                line-height: 1.5;
+                font-size: 11.5pt;
+            }
+        }
+    }
+}

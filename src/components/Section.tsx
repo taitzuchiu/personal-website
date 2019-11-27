@@ -1,7 +1,6 @@
 import * as React from "react";
-import "./components.scss";
+import "../styles/styles.scss";
 import Intro from "./Intro";
-// import { JSXElement } from "@babel/types";
 
 type SectionProps = {
   id: number;

@@ -1,0 +1,178 @@
+@import "./variables.scss";
+
+/* Mini Side Navigation */
+
+.side {
+    // Position 
+    position: fixed;
+    z-index: 100;
+    right: 100px;
+  
+    .nav {
+        // Position
+        position: fixed;
+        top: 44%;
+    
+        .button {
+            // Position & Display
+            position: relative;
+            margin-top: 20px;
+
+            display: block;
+            height: 10px;
+            width: 10px;
+
+            // Colour & Style
+            background-color: white;
+            border: $primary-color solid 2px;
+            border-radius: 50%;
+  
+            &:hover {
+                background-color: $light-color;
+                transition: all .3s ease;
+            }
+    
+            &.selected {
+                background-color: $primary-color;
+                border: white solid 2px;
+                transition: all .1s ease-in-out;
+            }
+    
+            // Link inside button
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                cursor: pointer;
+            }
+    
+            .mini {
+                font-size: 0px;
+            }
+        }
+    }
+}
+
+/* Hamburger Navigation */
+/* Pure CSS hamburger code from Erik Terwan, MIT license: 
+   https://codepen.io/erikterwan/pen/EVzeRP */
+.hamburger {
+    // Position
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    right: 80px;
+
+    // Display
+    display: block;
+
+    user-select: none;
+    -webkit-user-select: none;
+  
+    input {
+        position: absolute;
+        z-index: 2; // above hamburger
+        display: block;
+
+        opacity: 0; // hidden
+
+        width: 33px;
+        height: 22px;
+        cursor: pointer;
+    }
+  
+    // makes the hamburger
+    span {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin-bottom: 5px;
+
+        width: 33px;
+        height: 4px;
+      
+        background: $primary-color;
+        border-radius: 3px;
+        
+        transform-origin: 4px 0px;
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+  
+    span:first-child {
+        transform-origin: 0% 0%;
+    }
+  
+    span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+  
+    input:checked {
+        ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: $dark-color;
+        }
+    
+        ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+    
+        ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        } 
+    }
+  
+    .buttons {
+        position: absolute;
+        margin: -100px 0 0 -100px;
+
+        width: 150px;
+
+        padding-left: 35px;
+        padding-right: 50px;
+        padding-top: 150px;
+        padding-bottom: 100vh;
+        
+        background: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(300px, 0);
+        
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
+        div {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+    
+        .button {
+            margin: 0px 12px 0px 12px;
+        
+            padding: 8px 12px 8px 15px;
+        
+            color: $primary-color;
+            font-weight:600;
+            text-decoration: none;
+    
+            &:hover {
+                color: $dark-color;
+            }
+        }
+    }
+  
+    input:checked ~ .buttons {
+        transform: none;
+    }
+}
+  

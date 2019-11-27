@@ -1,7 +1,5 @@
 import * as React from "react";
-import "./components.scss";
-
-// import Header from "./Header";
+import "../styles/styles.scss";
 
 class Intro extends React.Component {
   render() {

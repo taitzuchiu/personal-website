@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./components.scss";
+import "../styles/styles.scss";
 import { ReactComponent as GHLogo } from "../images/github.svg";
 import { ReactComponent as LiLogo } from "../images/linkedin.svg";
 import { ReactComponent as EmailLogo } from "../images/envelope.svg";

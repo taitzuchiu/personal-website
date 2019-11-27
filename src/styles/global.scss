@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+html {
+    // Text
+    font-family: 'Quicksand', sans-serif !important;
+    letter-spacing: 2px;
+
+    // Background
+    background-image: url("../images/background.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+  
+    a {
+        // Colour & Text
+        color: $hyperlink-color;
+        font-weight: 800;
+        text-decoration: none;
+  
+        &:hover {
+            color: $dark-color;
+        }
+    }
+  
+    body {
+        // Display
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+  }
+  

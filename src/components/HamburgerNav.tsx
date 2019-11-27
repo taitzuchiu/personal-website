@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./components.scss";
+import "../styles/styles.scss";
 
 import Button from "./Button";
 

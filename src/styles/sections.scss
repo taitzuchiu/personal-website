@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.intro {
+    // Display
+    padding: 12% 12% 12% 20%;
+
+    // Colour & Text
+    color: $intro-color;
+    text-align: left;
+    
+    h1 {
+        font-size: 60px;
+        font-weight: 300;
+    }
+  
+    h2 {
+        color: $light-color;
+        font-size: 50px;
+        font-weight: 300;
+    }
+}
+  
+.mySection{
+    .box {
+        // Position
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // Display
+        padding-top: 50px;
+        padding: 5%;
+        height: fit-content;
+        width: 60vw;
+
+        // Colour
+        color: $dark-color;
+  
+        .title {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 2;
+        }
+  
+        .text {
+            font-size: 18px;
+            line-height: 1.75;
+        }
+    }
+  }

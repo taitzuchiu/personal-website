@@ -2,7 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { appState } from '../redux/reducers';
 
-import "./components.scss";
+import "../styles/styles.scss";
 
 interface Props {
   id: number; // buttonID - maps to sectionID
